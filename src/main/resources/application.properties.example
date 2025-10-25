@@ -1,22 +1,17 @@
-# Server
-server.port=8080
-
-# H2 Database - CONFIGURACIÓN CORREGIDA
+echo "# Database Configuration
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.driverClassName=org.h2.Driver
 spring.datasource.username=sa
-spring.datasource.password=password
+spring.datasource.password=
 
-# JPA
+# JPA Configuration
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.jpa.hibernate.ddl-auto=create-drop
 spring.jpa.show-sql=true
 
-# H2 Console - CONFIGURACIÓN CORREGIDA
+# H2 Console
 spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
-spring.h2.console.settings.trace=false
-spring.h2.console.settings.web-allow-others=false
 
-# Mostrar los endpoints en consola
-logging.level.org.springframework.web=INFO
+# Server
+server.port=8080"
