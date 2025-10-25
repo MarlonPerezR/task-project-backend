@@ -15,7 +15,7 @@ The Task Manager Backend is a robust Spring Boot REST API that powers the Task M
 - **Error Handling** - Comprehensive exception handling and validation
 
 ## Technologies Used
-- **Spring Boot 3.x** - Application framework
+- **Spring Boot** - Application framework
 - **H2 Database** - In-memory database for development
 - **JPA/Hibernate** - Object-relational mapping and data persistence
 - **Maven** - Dependency management and build automation
