@@ -2,8 +2,7 @@ services:
   - type: web
     name: task-project-backend
     plan: free
-    docker:
-      dockerfile: Dockerfile
+    dockerfile: Dockerfile
     buildCommand: ./mvnw clean package -DskipTests
     envVars:
       - key: SPRING_PROFILES_ACTIVE
