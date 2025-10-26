@@ -1,5 +1,7 @@
 com\task\task_project\repository\TaskRepository.class
+com\task\task_project\config\CORSConfig.class
 com\task\task_project\model\Task.class
+com\task\task_project\config\CORSConfig$1.class
 com\task\task_project\model\Task$Priority.class
 com\task\task_project\service\TaskService.class
 com\task\task_project\controller\TaskController.class
