@@ -1,10 +1,10 @@
 services:
   - type: web
     name: task-project-backend
-    env: java
     plan: free
+    docker:
+      dockerfile: Dockerfile
     buildCommand: ./mvnw clean package -DskipTests
-    startCommand: java -jar target/*.jar
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: production
