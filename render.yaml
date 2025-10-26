@@ -3,7 +3,7 @@ services:
     name: task-project-backend
     plan: free
     buildCommand: ./mvnw clean package -DskipTests
-    startCommand: java -jar target/*.jar
+    startCommand: java -jar target/task_project-0.0.1-SNAPSHOT.jar
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: production
