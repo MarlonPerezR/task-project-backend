@@ -20,7 +20,7 @@ public class CORSConfig {
                             "http://localhost:5173",        // Vite dev server  
                             "http://127.0.0.1:3000",
                             "http://127.0.0.1:5173",
-                            "https://tu-frontend.onrender.com"  // Reemplaza con tu frontend en Render
+                            "https://task-project-frontend-fawn.vercel.app"   
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                         .allowedHeaders("*")
