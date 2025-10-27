@@ -11,16 +11,19 @@ public class CORSConfig {
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
+            @SuppressWarnings("null")
             @Override
-            public void addCorsMappings(@SuppressWarnings("null") CorsRegistry registry) {
+            public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins(
-                            "https://task-project-frontend-fawn.vercel.app",  // ✅ SOLO tu dominio de producción
-                            "http://localhost:3000"  // ✅ SOLO para desarrollo local
+                            "https://task-project-frontend-fawn.vercel.app",
+                            "http://localhost:3000"
                         )
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD")
                         .allowedHeaders("*")
-                        .allowCredentials(false); // ✅ false para evitar conflictos
+                        .exposedHeaders("Authorization", "Content-Type", "Content-Disposition")
+                        .allowCredentials(false)
+                        .maxAge(3600); // Cache pre-flight requests for 1 hour
             }
         };
     }
