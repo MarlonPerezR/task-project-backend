@@ -6,6 +6,11 @@ The Task Manager Backend is a robust Spring Boot REST API that powers the Task M
 ## Demo Video
 *[Add your demo video link here]*
 
+## Deployed 
+This application is deployed on Render and is live for testing and demonstration purposes. The backend service is running continuously and can be accessed via the deployed API endpoints.
+
+
+
 ## Key Features
 - **RESTful API** - Complete CRUD operations for task management
 - **Database Integration** - H2 in-memory database with web console
