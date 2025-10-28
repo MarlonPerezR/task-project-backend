@@ -11,7 +11,6 @@ public class CORSConfig {
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
-            @SuppressWarnings("null")
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
@@ -19,11 +18,11 @@ public class CORSConfig {
                             "https://task-project-frontend-fawn.vercel.app",
                             "http://localhost:3000"
                         )
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                         .allowedHeaders("*")
                         .exposedHeaders("Authorization", "Content-Type", "Content-Disposition")
-                        .allowCredentials(false)
-                        .maxAge(3600); // Cache pre-flight requests for 1 hour
+                        .allowCredentials(true)
+                        .maxAge(3600); // Cachea preflight requests por 1 hora
             }
         };
     }
