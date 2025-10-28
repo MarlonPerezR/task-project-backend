@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class CORSConfig {
+public class CorsConfig {
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
@@ -14,16 +14,12 @@ public class CORSConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins(
-                                "https://task-project-frontend-fawn.vercel.app",
-                                "http://localhost:3000"
-                        )
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
+                        .allowedOriginPatterns("*") 
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
-                        .exposedHeaders("Authorization", "Content-Type", "Content-Disposition")
-                        .allowCredentials(false) // ✅ sin credenciales
-                        .maxAge(3600);
+                        .allowCredentials(true);
             }
         };
     }
 }
+
