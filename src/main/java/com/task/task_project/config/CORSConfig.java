@@ -21,7 +21,7 @@ public class CORSConfig {
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                         .allowedHeaders("*")
                         .exposedHeaders("Authorization", "Content-Type", "Content-Disposition")
-                        .allowCredentials(false) 
+                        .allowCredentials(false) // ✅ sin credenciales
                         .maxAge(3600);
             }
         };
