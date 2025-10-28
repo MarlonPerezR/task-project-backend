@@ -14,7 +14,6 @@ public class CORSConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        // Lista explícita de orígenes permitidos
                         .allowedOrigins(
                                 "https://task-project-frontend-fawn.vercel.app",
                                 "http://localhost:3000"
@@ -22,8 +21,7 @@ public class CORSConfig {
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                         .allowedHeaders("*")
                         .exposedHeaders("Authorization", "Content-Type", "Content-Disposition")
-                        // Desactiva credenciales si no usas cookies o auth
-                        .allowCredentials(false)
+                        .allowCredentials(false) 
                         .maxAge(3600);
             }
         };
